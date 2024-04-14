@@ -6,7 +6,7 @@ def iterate_and_update_files(path: str):
     invoice_index = 1
     for file in glob.glob(path, recursive=True):
         file_name = file[file.rfind("/") + 1:]
-        os.rename(file, file.replace(file_name, f"Facture_{invoice_index}_{file_name}"))
+        os.rename(file, file.replace(file_name, f"Note_de_frais_numero_{invoice_index}_{file_name}"))
         invoice_index += 1
 
 
